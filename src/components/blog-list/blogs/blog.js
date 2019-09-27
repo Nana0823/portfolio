@@ -13,13 +13,13 @@ export default class Blog extends Component {
     }
     render() {
         return (
-            <Grid style={{ maxWidth: '960px', margin: '0 auto', borderTop: 'solid', paddingTop: '20px', borderTopWidth: '1px' }}>
+            <Grid style={{ maxWidth: '960px', margin: '0 auto' }}>
                 <GridColumn width={4}>
                     <Picture blogItem={this.state.blogItem} />
                 </GridColumn>
                 <GridColumn width={12}>
-                    <Date blogItem={this.state.blogItem} />
                     <Title blogItem={this.state.blogItem} />
+                    <Date blogItem={this.state.blogItem} />
                     <Text blogItem={this.state.blogItem} />
                 </GridColumn>
             </Grid>

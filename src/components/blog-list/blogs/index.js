@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import Blog from './blog'
+import Theme from './theme'
+import { Grid, Segment, GridColumn } from 'semantic-ui-react';
 
 const blogItems = [
     {
@@ -25,15 +27,24 @@ const blogItems = [
 export default class Blogs extends Component {
     render() {
         return (
-            <div>
-                {blogItems.map((blogItem) => {
-                    return (
-                        <Blog
-                            key={blogItem.title}
-                            blogItem={blogItem} />
-                    )
-                })}
-            </div>
+            <Grid style={{ margin: '0 auto', maxWidth: '1100px' }}>
+                <GridColumn width={12}>
+                    <Segment style={{ maxWidth: '750px', margin: '0 auto' }}>
+                        <div>
+                            {blogItems.map((blogItem) => {
+                                return (
+                                    <Blog
+                                        key={blogItem.title}
+                                        blogItem={blogItem} />
+                                )
+                            })}
+                        </div>
+                    </Segment>
+                </GridColumn>
+                <GridColumn width={4}>
+                    <Theme />
+                </GridColumn>
+            </Grid>
         )
     }
 }

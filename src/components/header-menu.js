@@ -23,8 +23,8 @@ export default class HeaderMenu extends Component {
                         onClick={this.handleItemClick}
                     />
                     <Menu.Item
-                        name='SKILLS'
-                        active={this.state.activeItem === 'SKILLS'}
+                        name='PROFILE'
+                        active={this.state.activeItem === 'PROFILE'}
                         onClick={this.handleItemClick}
                     />
                 </Menu>
