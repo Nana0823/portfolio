@@ -13,7 +13,7 @@ export default class Blog extends Component {
     }
     render() {
         return (
-            <Grid style={{ maxWidth: '960px', margin: '0 auto' }}>
+            <Grid >
                 <GridColumn width={4}>
                     <Picture blogItem={this.state.blogItem} />
                 </GridColumn>

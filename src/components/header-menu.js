@@ -1,33 +1,43 @@
 import React, { Component } from 'react'
-import { Menu } from 'semantic-ui-react'
+import { Grid, Button, GridColumn } from 'semantic-ui-react'
+import { Link } from 'gatsby'
 export default class HeaderMenu extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            activeItem: 'HOME'
+            home: props.home,
+            blog: props.blog,
+            profile: props.profile
         };
     }
-    handleItemClick = (e, { name }) => this.setState({ activeItem: name })
     render() {
         return (
-            <div style={{ maxWidth: '500px', margin: '0 auto', marginBottom: '30px' }}>
-                <Menu secondary widths={3}>
-                    <Menu.Item
-                        name='HOME'
-                        active={this.state.activeItem === 'HOME'}
-                        onClick={this.handleItemClick}
-                    />
-                    <Menu.Item
-                        name='BLOG'
-                        active={this.state.activeItem === 'BLOG'}
-                        onClick={this.handleItemClick}
-                    />
-                    <Menu.Item
-                        name='PROFILE'
-                        active={this.state.activeItem === 'PROFILE'}
-                        onClick={this.handleItemClick}
-                    />
-                </Menu>
+            <div style={{ maxWidth: '500px', margin: '0 auto', marginBottom: '30px', padding: '10px' }}>
+                <Grid>
+                    <Grid.Row columns={3}>
+                        <GridColumn>
+                            <Link to=''>
+                                <Button color={this.state.home}>
+                                    HOME
+                        </Button>
+                            </Link>
+                        </GridColumn>
+                        <GridColumn>
+                            <Link to='blog-list'>
+                                <Button color={this.state.blog}>
+                                    BLOG
+                        </Button>
+                            </Link>
+                        </GridColumn>
+                        <GridColumn>
+                            <Link to='profile-page'>
+                                <Button color={this.state.profile}>
+                                    PROFILE
+                        </Button>
+                            </Link>
+                        </GridColumn>
+                    </Grid.Row>
+                </Grid>
             </div>
         )
     }
