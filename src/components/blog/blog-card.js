@@ -16,7 +16,7 @@ export default class BlogCard extends Component {
                 border: 'solid', borderWidth: '1px', padding: '0px', margin: '0 14px', backgroundColor: 'white'
             }}>
                 <Image src={this.state.picture} />
-                <h3>{this.state.title}</h3>
+                <h4>{this.state.title}</h4>
                 <p style={{ marginBottom: '20px' }}>
                     {this.state.text}
                 </p>

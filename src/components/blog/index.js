@@ -39,25 +39,25 @@ export default class Blog extends Component {
                             date={date}
                             text={text}
                         />
+                        <h3 style={{ textAlign: 'center', marginTop: '30px' }}>オススメの記事</h3>
+                        <div style={{ background: '#E6E6FA', padding: '10px 40px' }}>
+                            <Slider {...settings} style={{ marginTop: '30px' }}>
+                                {blogRecommend.map((blog) => {
+                                    return <BlogCard
+                                        key={blog.idx}
+                                        title={blog.title}
+                                        picture={blog.picture}
+                                        text={blog.text}
+                                    />
+                                })}
+                            </Slider>
+                        </div>
+                        <BlogFooter />
                     </GridColumn>
                     <GridColumn width={4}>
                         <BlogProfile />
                     </GridColumn>
                 </Grid>
-                <h3 style={{ textAlign: 'center', marginTop: '30px' }}>オススメの記事</h3>
-                <div style={{ background: '#E6E6FA', padding: '10px 40px' }}>
-                    <Slider {...settings} style={{ marginTop: '30px' }}>
-                        {blogRecommend.map((blog) => {
-                            return <BlogCard
-                                key={blog.idx}
-                                title={blog.title}
-                                picture={blog.picture}
-                                text={blog.text}
-                            />
-                        })}
-                    </Slider>
-                </div>
-                <BlogFooter />
             </div>
         )
     }
