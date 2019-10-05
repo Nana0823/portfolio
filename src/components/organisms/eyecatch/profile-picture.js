@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Image } from 'semantic-ui-react'
-import YokosukaImage from '../../images/yokosuka1.png'
+import YokosukaImage from '../../atoms/images/yokosuka1.png'
 export default class ProfilePicture extends Component {
     render() {
         return (

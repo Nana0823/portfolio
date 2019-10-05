@@ -1,19 +1,21 @@
 import React, { Component } from 'react'
-import HeaderMenu from '../components/header-menu'
-import Profile from '../components/profile'
-import Footer from '../components/footer'
-import { Responsive } from 'semantic-ui-react';
+import ProfilePicture from '../components/organisms/eyecatch/profile-picture'
+import Introduces from '../components/organisms/profile/introduces'
+import Timeline from '../components/organisms/timeline/timeline'
+import HeaderMenu from '../components/molecules/header/header-menu'
+import Footer from '../components/molecules/footer/footer'
 
-const profile = "black"
-export default class ProfilePage extends Component {
+export default class Profile extends Component {
     render() {
         return (
             <div>
-                <HeaderMenu profile={profile} />
+                <HeaderMenu />
                 <div style={{ margin: '0 auto', maxWidth: '960px' }}>
-                    <Profile />
+                    <ProfilePicture />
+                    <Introduces />
+                    <Timeline />
+                    <Footer />
                 </div>
-                <Footer />
             </div>
         )
     }

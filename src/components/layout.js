@@ -9,8 +9,8 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import 'semantic-ui-css/semantic.min.css'
-import HeaderMenu from './header-menu'
-import Footer from './footer'
+import HeaderMenu from './molecules/header/header-menu'
+import Footer from './molecules/footer/footer'
 import "./layout.css"
 import { Responsive } from 'semantic-ui-react'
 

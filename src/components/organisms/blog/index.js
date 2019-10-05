@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import BlogFooter from '../../molecules/footer/blog-footer'
+import RecentPosts from './recent-posts'
 import BlogItem from './blog'
 import RecommendBlog from './recommend-blog'
-import BlogProfile from '../../organisms/card/blog-profile'
+import BlogProfile from '../../molecules/card/blog-profile'
 import BlogPicture from '../../atoms/blog-picture'
 import { Grid, GridColumn } from 'semantic-ui-react';
 
@@ -15,7 +15,7 @@ export default class Blog extends Component {
                     <GridColumn width={12}>
                         <BlogItem />
                         <RecommendBlog />
-                        <BlogFooter />
+                        <RecentPosts />
                     </GridColumn>
                     <GridColumn width={4}>
                         <BlogProfile />

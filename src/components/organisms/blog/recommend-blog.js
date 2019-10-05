@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import BlogCard from '../../molecules/card/blog-card'
+import RecommendBlogCard from '../../molecules/card/recommend-blog-card'
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import Slider from "react-slick"
@@ -27,7 +27,7 @@ export default class RecommendBlog extends Component {
                 <div>
                     <Slider {...settings} style={{ marginTop: '30px' }}>
                         {blogRecommend.map((blog) => {
-                            return <BlogCard
+                            return <RecommendBlogCard
                                 key={blog.idx}
                                 title={blog.title}
                                 picture={blog.picture}

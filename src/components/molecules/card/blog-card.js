@@ -1,26 +1,60 @@
 import React, { Component } from 'react'
-import { Image } from 'semantic-ui-react'
-
+import { Grid, GridColumn, Image, Segment, Link } from 'semantic-ui-react';
+import { StaticQuery, graphql } from "gatsby";
 export default class BlogCard extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            picture: props.picture,
-            title: props.title,
-            text: props.text
-        };
-    }
     render() {
         return (
-            <div style={{
-                border: 'solid', borderWidth: '1px', padding: '0px', margin: '0 14px', backgroundColor: 'white'
-            }}>
-                <Image src={this.state.picture} />
-                <h4>{this.state.title}</h4>
-                <p style={{ marginBottom: '20px' }}>
-                    {this.state.text}
-                </p>
-            </div>
+            <StaticQuery
+                query={graphql`
+                     query MyQuery {
+                        allContentfulBlog {
+                            edges {
+                                node {
+                                    body {
+                                        childMarkdownRemark {
+                                            html
+                                        }
+                                    }
+                                    title
+                                    updatedAt
+                                    description {
+                                        description
+                                    }
+                                }
+                            }
+                        }
+                    }
+                     `
+                }
+                render={
+                    data => {
+                        return (
+                            <Segment>
+                                <Grid >
+                                    {data.allContentfulBlog.edges.map((blog) => {
+                                        return (
+                                            <>
+                                                <GridColumn width={5}>
+                                                    <Image src='https://react.semantic-ui.com/images/wireframe/image.png' size='small' />
+                                                </GridColumn>
+                                                <GridColumn width={11}>
+                                                    <h3 style={{ marginBottom: '26px' }}>{blog.node.title}</h3>
+                                                    <p>
+                                                        {blog.node.updatedAt}
+                                                    </p>
+                                                    <p>
+                                                        {blog.node.description.description}
+                                                    </p>
+                                                </GridColumn>
+                                            </>
+                                        )
+                                    })}
+                                </Grid>
+                            </Segment>
+                        )
+                    }
+                }
+            />
         )
     }
 }
