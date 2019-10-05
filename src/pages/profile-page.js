@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import HeaderMenu from '../components/header-menu'
 import Profile from '../components/profile'
 import Footer from '../components/footer'
+import { Responsive } from 'semantic-ui-react';
 
 const profile = "black"
 export default class ProfilePage extends Component {

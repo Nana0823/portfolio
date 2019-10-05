@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import HeaderMenu from '../components/header-menu'
-import BlogHeader from '../components/blog-list/blog-header'
 import Blogs from '../components/blog-list/blogs'
 
 const blog = 'black'

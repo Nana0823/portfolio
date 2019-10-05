@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Blog from './a-blog'
 import Theme from './side-menu'
 import BlogHeader from '../blog-header'
-import { Grid, Segment, GridColumn } from 'semantic-ui-react';
+import { Grid, Segment, GridColumn, Responsive } from 'semantic-ui-react';
 
 const blogItems = [
     {
@@ -27,23 +27,41 @@ const blogItems = [
 export default class Blogs extends Component {
     render() {
         return (
-            <Grid style={{ margin: '0 auto', maxWidth: '1000px' }}>
-                <GridColumn width={12}>
-                    <BlogHeader />
-                    {blogItems.map((blogItem) => {
-                        return (
-                            <Segment>
-                                <Blog
-                                    key={blogItem.title}
-                                    blogItem={blogItem} />
-                            </Segment>
-                        )
-                    })}
-                </GridColumn>
-                <GridColumn width={4}>
-                    <Theme />
-                </GridColumn>
-            </Grid>
+            <div>
+                <Responsive minWidth={860}>
+                    <Grid style={{ margin: '0 auto', maxWidth: '1000px' }}>
+                        <GridColumn width={12}>
+                            <BlogHeader />
+                            {blogItems.map((blogItem) => {
+                                return (
+                                    <Segment>
+                                        <Blog
+                                            key={blogItem.title}
+                                            blogItem={blogItem} />
+                                    </Segment>
+                                )
+                            })}
+                        </GridColumn>
+                        <GridColumn width={4}>
+                            <Theme />
+                        </GridColumn>
+                    </Grid>
+                </Responsive>
+                <Responsive maxWidth={860}>
+                    <div style={{ margin: '0 auto', maxWidth: '1000px' }}>
+                        <BlogHeader />
+                        {blogItems.map((blogItem) => {
+                            return (
+                                <Segment>
+                                    <Blog
+                                        key={blogItem.title}
+                                        blogItem={blogItem} />
+                                </Segment>
+                            )
+                        })}
+                    </div>
+                </Responsive>
+            </div>
         )
     }
 }
