@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import HeaderMenu from '../components/header-menu'
-import Blog from '../components/blog'
+import Blog from '../components/organisms/blog/index'
 import Footer from '../components/footer'
 
 const blog = 'black'

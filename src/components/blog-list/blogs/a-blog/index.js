@@ -1,28 +1,61 @@
 import React, { Component } from 'react'
-import Picture from './picture'
-import Title from './title'
-import Date from './date'
-import Text from './text'
-import { Grid, GridColumn } from 'semantic-ui-react';
+import { Grid, GridColumn, Image, Segment, Link } from 'semantic-ui-react';
+import { StaticQuery, graphql } from "gatsby";
 export default class Blog extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            blogItem: props.blogItem
-        };
-    }
     render() {
         return (
-            <Grid >
-                <GridColumn width={4}>
-                    <Picture blogItem={this.state.blogItem} />
-                </GridColumn>
-                <GridColumn width={12}>
-                    <Title blogItem={this.state.blogItem} />
-                    <Date blogItem={this.state.blogItem} />
-                    <Text blogItem={this.state.blogItem} />
-                </GridColumn>
-            </Grid>
+            <StaticQuery
+                query={graphql`
+                     query MyQuery {
+                        allContentfulBlog {
+                            edges {
+                                node {
+                                    body {
+                                        childMarkdownRemark {
+                                            html
+                                        }
+                                    }
+                                    title
+                                    updatedAt
+                                    description {
+                                        description
+                                    }
+                                }
+                            }
+                        }
+                    }
+                     `
+                }
+                render={
+                    data => {
+                        return (
+                            <Segment>
+                                <Grid >
+                                    {data.allContentfulBlog.edges.map((blog) => {
+                                        return (
+                                            <>
+                                                <GridColumn width={5}>
+                                                    <Image src='https://react.semantic-ui.com/images/wireframe/image.png' size='small' />
+                                                </GridColumn>
+                                                <GridColumn width={11}>
+                                                    <h3 style={{ marginBottom: '26px' }}>{blog.node.title}</h3>
+                                                    <p>
+                                                        {blog.node.updatedAt}
+                                                    </p>
+                                                    <p>
+                                                        {blog.node.description.description}
+                                                    </p>
+                                                </GridColumn>
+                                            </>
+                                        )
+                                    })}
+                                </Grid>
+                            </Segment>
+                        )
+                    }
+
+                }
+            />
         )
     }
 }
