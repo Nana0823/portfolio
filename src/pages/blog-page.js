@@ -1,16 +1,17 @@
 import React, { Component } from 'react'
 import HeaderMenu from '../components/molecules/header/header-menu'
 import Blog from '../components/organisms/blog/index'
-import Footer from '../components/molecules/footer/footer'
+import Layout from '../components/layout'
 
-const blog = 'black'
+const activeItem = 'BLOG'
 export default class BlogPage extends Component {
     render() {
         return (
             <div>
-                <HeaderMenu blog={blog} />
-                <Blog />
-                <Footer />
+                <HeaderMenu activeItem={activeItem} />
+                <Layout>
+                    <Blog />
+                </Layout>
             </div>
         )
     }

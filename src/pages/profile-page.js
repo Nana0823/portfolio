@@ -3,19 +3,19 @@ import ProfilePicture from '../components/organisms/eyecatch/profile-picture'
 import Introduces from '../components/organisms/profile/introduces'
 import Timeline from '../components/organisms/timeline/timeline'
 import HeaderMenu from '../components/molecules/header/header-menu'
-import Footer from '../components/molecules/footer/footer'
+import Layout from '../components/layout'
+const activeItem = 'PROFILE'
 
 export default class Profile extends Component {
     render() {
         return (
             <div>
-                <HeaderMenu />
-                <div style={{ margin: '0 auto', maxWidth: '960px' }}>
+                <HeaderMenu activeItem={activeItem} />
+                <Layout>
                     <ProfilePicture />
                     <Introduces />
                     <Timeline />
-                    <Footer />
-                </div>
+                </Layout>
             </div>
         )
     }

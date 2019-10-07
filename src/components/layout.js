@@ -9,7 +9,6 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import 'semantic-ui-css/semantic.min.css'
-import HeaderMenu from './molecules/header/header-menu'
 import Footer from './molecules/footer/footer'
 import "./layout.css"
 import { Responsive } from 'semantic-ui-react'
@@ -26,10 +25,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
-      <HeaderMenu>
-        {children}
-      </HeaderMenu>
+    <div style={{ backgroundColor: '#99CCCC', paddingTop: '30px' }}>
       <Responsive>
         <div
           style={{
@@ -43,7 +39,7 @@ const Layout = ({ children }) => {
         </div>
       </Responsive>
       <Footer />
-    </>
+    </div>
   )
 }
 
