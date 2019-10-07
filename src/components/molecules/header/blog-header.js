@@ -1,12 +1,6 @@
 import React, { Component } from 'react'
 import { Responsive, Button, Grid, Select, GridColumn } from 'semantic-ui-react'
 
-const kategories = [
-    { key: 1, text: 'ブログ' },
-    { key: 2, text: '学び' },
-    { key: 3, text: '暮らし' },
-    { key: 4, text: 'メモ' },
-];
 export default class BlogHeader extends Component {
     render() {
         const selectOptions = [

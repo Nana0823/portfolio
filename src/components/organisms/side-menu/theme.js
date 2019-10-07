@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Input, Button, Segment, Responsive } from 'semantic-ui-react'
+import { Segment, Responsive } from 'semantic-ui-react'
 import SearchTheme from '../../molecules/blog-list/search-theme'
 import RefineTheme from '../../molecules/blog-list/refine-theme'
 

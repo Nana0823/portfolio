@@ -22,21 +22,18 @@ const blogRecommend = [
 export default class RecommendBlog extends Component {
     render() {
         return (
-            <Segment style={{ background: '#E6E6FA' }}>
-                <h3 style={{ textAlign: 'center' }}>オススメの記事</h3>
-                <div>
-                    <Slider {...settings} style={{ marginTop: '30px' }}>
-                        {blogRecommend.map((blog) => {
-                            return <RecommendBlogCard
-                                key={blog.idx}
-                                title={blog.title}
-                                picture={blog.picture}
-                                text={blog.text}
-                            />
-                        })}
-                    </Slider>
-                </div>
-            </Segment>
+            <div>
+                <Slider {...settings} style={{ marginTop: '30px' }}>
+                    {blogRecommend.map((blog) => {
+                        return <RecommendBlogCard
+                            key={blog.idx}
+                            title={blog.title}
+                            picture={blog.picture}
+                            text={blog.text}
+                        />
+                    })}
+                </Slider>
+            </div>
         )
     }
 }

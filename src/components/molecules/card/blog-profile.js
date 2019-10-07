@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import { Image, Button, Card, Icon } from 'semantic-ui-react';
-import { Link } from 'gatsby'
+import { Image, Card, Icon } from 'semantic-ui-react';
 
 export default class BlogProfile extends Component {
     render() {
@@ -17,8 +16,14 @@ export default class BlogProfile extends Component {
                     </Card.Description>
                 </Card.Content>
                 <Card.Content>
-                    <Icon color='teal' name='instagram' size='big' />
-                    @Nanako0823
+                    <p>
+                        <Icon name='instagram' />
+                        Nanako0823
+                    </p>
+                    <p>
+                        <Icon name='github' />
+                        Nana0823
+                    </p>
                 </Card.Content>
             </Card>
         )

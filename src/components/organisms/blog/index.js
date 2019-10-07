@@ -4,7 +4,7 @@ import BlogItem from './blog'
 import RecommendBlog from './recommend-blog'
 import BlogProfile from '../../molecules/card/blog-profile'
 import BlogPicture from '../../atoms/blog-picture'
-import { Grid, GridColumn } from 'semantic-ui-react';
+import { Grid, GridColumn, Segment } from 'semantic-ui-react';
 
 export default class Blog extends Component {
     render() {
@@ -14,7 +14,10 @@ export default class Blog extends Component {
                 <Grid>
                     <GridColumn width={12}>
                         <BlogItem />
-                        <RecommendBlog />
+                        <Segment>
+                            <h3 style={{ textAlign: 'center' }}>オススメの記事</h3>
+                            <RecommendBlog />
+                        </Segment>
                         <RecentPosts />
                     </GridColumn>
                     <GridColumn width={4}>

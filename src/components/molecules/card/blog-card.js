@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { Grid, GridColumn, Image, Segment, Link } from 'semantic-ui-react';
-import { StaticQuery, graphql } from "gatsby";
+import { Grid, GridColumn, Image, Segment } from 'semantic-ui-react';
+import { StaticQuery, graphql, Link } from "gatsby";
 export default class BlogCard extends Component {
     render() {
         return (
@@ -35,10 +35,14 @@ export default class BlogCard extends Component {
                                         return (
                                             <>
                                                 <GridColumn width={5}>
-                                                    <Image src='https://react.semantic-ui.com/images/wireframe/image.png' size='small' />
+                                                    <Link to='blog-page'>
+                                                        <Image src='https://react.semantic-ui.com/images/wireframe/image.png' size='small' />
+                                                    </Link>
                                                 </GridColumn>
                                                 <GridColumn width={11}>
-                                                    <h3 style={{ marginBottom: '26px' }}>{blog.node.title}</h3>
+                                                    <Link to='blog-page'>
+                                                        <h3 style={{ marginBottom: '26px' }}>{blog.node.title}</h3>
+                                                    </Link>
                                                     <p>
                                                         {blog.node.updatedAt}
                                                     </p>

@@ -7,23 +7,12 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 import 'semantic-ui-css/semantic.min.css'
 import Footer from './molecules/footer/footer'
 import "./layout.css"
 import { Responsive } from 'semantic-ui-react'
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
   return (
     <div style={{ backgroundColor: '#99CCCC', paddingTop: '30px' }}>
       <Responsive>
