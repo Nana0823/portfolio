@@ -27,7 +27,7 @@ export default class RefineTheme extends Component {
                     )
                 })}
                 <div style={{ textAlign: 'center', marginTop: '5px' }}>
-                    <Button size='mini' style={{ width: '150px' }}>絞り込み</Button>
+                    <Button size='mini' color='purple' style={{ width: '150px' }}>絞り込み</Button>
                 </div>
             </>
         )

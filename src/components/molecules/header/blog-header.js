@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Responsive, Button, Grid, Select, GridColumn } from 'semantic-ui-react'
-
+import ModalSelect from '../../atoms/modal-select'
 export default class BlogHeader extends Component {
     render() {
         const selectOptions = [
@@ -29,7 +29,7 @@ export default class BlogHeader extends Component {
                     <Grid style={{ margin: '0 auto', marginBottom: '20px' }}>
                         <Grid.Row columns={3}>
                             <GridColumn>
-                                <Button size='small'>絞り込み</Button>
+                                <ModalSelect />
                             </GridColumn>
                             <GridColumn style={{ textAlign: 'center' }}>
                                 <h2>BLOG LIST</h2>

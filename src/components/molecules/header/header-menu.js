@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Menu, Segment } from 'semantic-ui-react'
 import { Link } from 'gatsby'
-
 export default class HeaderMenu extends Component {
     constructor(props) {
         super(props);
