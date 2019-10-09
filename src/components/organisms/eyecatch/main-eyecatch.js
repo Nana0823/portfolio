@@ -6,7 +6,7 @@ export default class MainEyecatch extends Component {
         return (
             <div style={{ position: 'relative', backgroundColor: '#99CCCC' }}>
                 <img alt='ホーム画面' src={Tokyo} style={{ borderRadius: '5px', borderCollapse: 'separate' }} />
-                <div style={{ position: 'absolute', top: '300px', left: '700px' }}>
+                <div style={{ position: 'absolute', top: '200px', left: '500px' }}>
                     <h2 style={{ fontFamily: 'Bookman Old Style' }}>NANAKO OHNO</h2>
                     <p>Welcome to my portfolio site.</p>
                 </div>
