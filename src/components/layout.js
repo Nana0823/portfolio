@@ -9,13 +9,17 @@ import React from "react"
 import PropTypes from "prop-types"
 import 'semantic-ui-css/semantic.min.css'
 import Footer from './molecules/footer/footer'
+import HeaderMenu from './molecules/header/header-menu'
 import "./layout.css"
 import { Responsive } from 'semantic-ui-react'
 
 const Layout = ({ children }) => {
   return (
-    <div style={{ backgroundColor: '#99CCCC', paddingTop: '30px' }}>
-      <Responsive>
+    <div style={{ backgroundColor: '#99CCCC' }}>
+      <HeaderMenu>
+        {children}
+      </HeaderMenu>
+      <Responsive minWidth={860} style={{ paddingTop: '30px' }}>
         <div
           style={{
             margin: `0 auto`,

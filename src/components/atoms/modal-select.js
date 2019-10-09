@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Button, Modal, Input, Image, Header } from 'semantic-ui-react'
+import { Button, Modal } from 'semantic-ui-react'
 import Tag from './tag'
 
 
