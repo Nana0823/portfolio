@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Item, Responsive, Card, Image } from 'semantic-ui-react';
 import { StaticQuery, graphql, Link } from "gatsby";
-export default class BlogCard extends Component {
+export default class RecentBlogCard extends Component {
     render() {
         return (
             <StaticQuery

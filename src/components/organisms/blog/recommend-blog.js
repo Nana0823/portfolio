@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import RecommendBlogCard from '../../molecules/card/recommend-blog-card'
+import { Grid, Responsive, Card, Image } from 'semantic-ui-react';
+import { StaticQuery, graphql, Link } from "gatsby";
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import Slider from "react-slick"
-import { Segment } from 'semantic-ui-react'
 
-const settings = {
+const Pcsettings = {
     dots: true,
     infinite: true,
     speed: 500,
@@ -13,27 +13,82 @@ const settings = {
     slidesToScroll: 1
 };
 
-const blogRecommend = [
-    { idx: 1, title: 'タイトル1', picture: 'https://react.semantic-ui.com/images/wireframe/image.png', text: '本文ーーーーーーーーーーー' },
-    { idx: 2, title: 'タイトル2', picture: 'https://react.semantic-ui.com/images/wireframe/image.png', text: '本文ーーーーーーーーーーー' },
-    { idx: 3, title: 'タイトル3', picture: 'https://react.semantic-ui.com/images/wireframe/image.png', text: '本文ーーーーーーーーーーー' },
-    { idx: 4, title: 'タイトル4', picture: 'https://react.semantic-ui.com/images/wireframe/image.png', text: '本文ーーーーーーーーーーー' },
-]
-export default class RecommendBlog extends Component {
+const Mobilesettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 1
+}
+export default class BlogCard extends Component {
     render() {
         return (
-            <div>
-                <Slider {...settings} style={{ marginTop: '30px' }}>
-                    {blogRecommend.map((blog) => {
-                        return <RecommendBlogCard
-                            key={blog.idx}
-                            title={blog.title}
-                            picture={blog.picture}
-                            text={blog.text}
-                        />
-                    })}
-                </Slider>
-            </div>
+            <StaticQuery
+                query={graphql`
+                     query MyQuery5 {
+                        allContentfulBlog {
+                            edges {
+                                node {
+                                    body {
+                                        childMarkdownRemark {
+                                            html
+                                        }
+                                    }
+                                    title
+                                    updatedAt
+                                    description {
+                                        description
+                                    }
+                                }
+                            }
+                        }
+                    }
+                     `
+                }
+                render={
+                    data => {
+                        return (
+                            <div>
+                                <Responsive minWidth={700}>
+                                    <Slider {...Pcsettings} style={{ marginTop: '30px' }}>
+                                        {data.allContentfulBlog.edges.map((blog) => {
+                                            return (
+                                                <>
+                                                    <Grid.Column style={{
+                                                        border: 'solid', borderWidth: '1px', padding: '0px', backgroundColor: 'white', margin: '0px 10px'
+                                                    }}>
+                                                        <Image src='https://react.semantic-ui.com/images/wireframe/image.png' />
+                                                        <h4>{blog.node.title}</h4>
+                                                        <p style={{ marginBottom: '20px' }}>
+                                                            {blog.node.description.description}
+                                                        </p>
+                                                    </Grid.Column>
+                                                </>
+                                            )
+                                        })}
+                                    </Slider>
+                                </Responsive>
+                                <Responsive maxWidth={700}>
+                                    <Slider {...Mobilesettings} style={{ marginTop: '30px' }}>
+                                        {data.allContentfulBlog.edges.map((blog) => {
+                                            return (
+                                                <>
+                                                    <Grid.Column style={{
+                                                        border: 'solid', borderWidth: '1px', padding: '0px', backgroundColor: 'white', margin: '0px 10px'
+                                                    }}>
+                                                        <Image src='https://react.semantic-ui.com/images/wireframe/image.png' style={{ marginBottom: '5px' }} />
+                                                        <h4>{blog.node.title}</h4>
+                                                    </Grid.Column>
+                                                </>
+                                            )
+                                        })}
+                                    </Slider>
+                                </Responsive>
+                            </div>
+                        )
+                    }
+                }
+            />
         )
     }
 }
