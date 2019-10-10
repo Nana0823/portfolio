@@ -13,7 +13,7 @@ export default class RecommendBlogCard extends Component {
     render() {
         return (
             <Grid.Column style={{
-                border: 'solid', borderWidth: '1px', padding: '0px', backgroundColor: 'white', margin: '10px 10px'
+                border: 'solid', borderWidth: '1px', padding: '0px', backgroundColor: 'white', margin: '0px 10px'
             }}>
                 <Image src={this.state.picture} />
                 <h4>{this.state.title}</h4>

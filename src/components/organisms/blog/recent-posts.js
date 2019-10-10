@@ -1,24 +1,19 @@
 import React, { Component } from 'react'
-import { Item, Segment } from 'semantic-ui-react'
+import { Item, Segment, Responsive } from 'semantic-ui-react'
+import RecentBlogCard from '../../molecules/card/recent-blog-card'
 
 export default class RecentPosts extends Component {
     render() {
         return (
             <Segment>
-                <Item.Group>
-                    <Item>
-                        <Item.Image size='tiny' src='https://react.semantic-ui.com/images/wireframe/image.png' />
-                        <Item.Content verticalAlign='middle' header='タイトル' meta='日付' />
-                    </Item>
-                    <Item>
-                        <Item.Image size='tiny' src='https://react.semantic-ui.com/images/wireframe/image.png' />
-                        <Item.Content verticalAlign='middle' header='タイトル' meta='日付' />
-                    </Item>
-                    <Item>
-                        <Item.Image size='tiny' src='https://react.semantic-ui.com/images/wireframe/image.png' />
-                        <Item.Content verticalAlign='middle' header='タイトル' meta='日付' />
-                    </Item>
-                </Item.Group>
+                <Responsive minWidth={780}>
+                    <Item.Group>
+                        <RecentBlogCard />
+                    </Item.Group>
+                </Responsive>
+                <Responsive maxWidth={780}>
+                    <RecentBlogCard />
+                </Responsive>
             </Segment>
         )
     }
