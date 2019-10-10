@@ -30,8 +30,8 @@ export default class RecentBlogCard extends Component {
                     data => {
                         return (
                             <div>
-                                <Responsive minWidth={780}>
-                                    <Item.Group>
+                                <Responsive minWidth={780} >
+                                    <Item.Group >
                                         {data.allContentfulBlog.edges.map((blog) => {
                                             return (
                                                 <>

@@ -26,18 +26,14 @@ export default class BlogHeader extends Component {
                     </Grid>
                 </Responsive>
                 <Responsive maxWidth={860}>
-                    <Grid style={{ margin: '0 auto', marginBottom: '20px' }}>
-                        <Grid.Row columns={3}>
-                            <GridColumn>
-                                <ModalSelect />
-                            </GridColumn>
-                            <GridColumn style={{ textAlign: 'center' }}>
-                                <h2>BLOG LIST</h2>
-                            </GridColumn>
-                            <GridColumn>
-                                <Select placeholder='新しい順' options={selectOptions} />
-                            </GridColumn>
-                        </Grid.Row>
+                    <h2 style={{ textAlign: 'center' }}>BLOG LIST</h2>
+                    <Grid style={{ margin: '0 auto', marginBottom: '10px' }}>
+                        <GridColumn width={10} style={{ padding: '0px' }}>
+                            <Select placeholder='新しい順' options={selectOptions} style={{ width: '30px' }} />
+                        </GridColumn>
+                        <GridColumn width={6} style={{ padding: '0px', textAlign: 'right' }}>
+                            <ModalSelect />
+                        </GridColumn>
                     </Grid>
                 </Responsive>
             </div>
