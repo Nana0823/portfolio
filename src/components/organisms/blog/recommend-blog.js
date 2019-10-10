@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Grid, Responsive, Card, Image } from 'semantic-ui-react';
+import { Grid, Responsive, Image } from 'semantic-ui-react';
 import { StaticQuery, graphql, Link } from "gatsby";
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
@@ -57,8 +57,10 @@ export default class BlogCard extends Component {
                                                     <Grid.Column style={{
                                                         border: 'solid', borderWidth: '1px', padding: '0px', backgroundColor: 'white', margin: '0px 10px'
                                                     }}>
-                                                        <Image src='https://react.semantic-ui.com/images/wireframe/image.png' />
-                                                        <h4>{blog.node.title}</h4>
+                                                        <Link to='blog-page'>
+                                                            <Image src='https://react.semantic-ui.com/images/wireframe/image.png' />
+                                                            <h4>{blog.node.title}</h4>
+                                                        </Link>
                                                         <p style={{ marginBottom: '20px' }}>
                                                             {blog.node.description.description}
                                                         </p>
@@ -76,8 +78,10 @@ export default class BlogCard extends Component {
                                                     <Grid.Column style={{
                                                         border: 'solid', borderWidth: '1px', padding: '0px', backgroundColor: 'white', margin: '0px 10px'
                                                     }}>
-                                                        <Image src='https://react.semantic-ui.com/images/wireframe/image.png' style={{ marginBottom: '5px' }} />
-                                                        <h4>{blog.node.title}</h4>
+                                                        <Link to='blog-page'>
+                                                            <Image src='https://react.semantic-ui.com/images/wireframe/image.png' style={{ marginBottom: '5px' }} />
+                                                            <h4>{blog.node.title}</h4>
+                                                        </Link>
                                                     </Grid.Column>
                                                 </>
                                             )
