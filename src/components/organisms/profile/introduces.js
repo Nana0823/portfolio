@@ -8,10 +8,10 @@ export default class Introduces extends Component {
             <div style={{ margin: '25px 0px' }}>
                 <h3>紹介文</h3>
                 <Grid>
-                    <GridColumn width={12}>
+                    <GridColumn width={11}>
                         <IntroduceList />
                     </GridColumn>
-                    <GridColumn width={4}>
+                    <GridColumn width={5}>
                         <Image src={Hobby} />
                     </GridColumn>
                 </Grid>

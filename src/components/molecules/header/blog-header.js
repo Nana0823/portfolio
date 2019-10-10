@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Responsive, Button, Grid, Select, GridColumn } from 'semantic-ui-react'
+import { Responsive, Grid, Select, GridColumn } from 'semantic-ui-react'
 import ModalSelect from '../../atoms/modal-select'
 export default class BlogHeader extends Component {
     render() {
@@ -10,7 +10,6 @@ export default class BlogHeader extends Component {
         ]
         return (
             <div>
-
                 <Responsive minWidth={860}>
                     <Grid style={{ margin: '0 auto', marginBottom: '20px' }}>
                         <Grid.Row columns={3}>

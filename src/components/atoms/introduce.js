@@ -9,7 +9,7 @@ export default class Introduce extends Component {
     }
     render() {
         return (
-            <p>{this.state.title}：　　　　{this.state.text}</p>
+            <p>{this.state.title}：{this.state.text}</p>
         )
     }
 }
