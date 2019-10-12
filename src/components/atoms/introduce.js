@@ -14,7 +14,7 @@ export default class Introduce extends Component {
                 <Responsive minWidth={860}>
                     <Grid>
                         <GridColumn width={5}>
-                            <Label as='a' color='teal' tag >
+                            <Label as='a' tag style={{ backgroundColor: '#CC6666', color: 'white' }}>
                                 {this.state.title}
                             </Label>
                         </GridColumn>
@@ -25,7 +25,7 @@ export default class Introduce extends Component {
                 </Responsive>
                 <Responsive maxWidth={860}>
                     <p style={{ marginBottom: '10px' }}>
-                        <Label as='a' color='teal' size='small' style={{ padding: '5px', marginRight: '10px' }}>
+                        <Label as='a' size='small' style={{ padding: '5px', marginRight: '10px', color: '#663333' }}>
                             {this.state.title}
                         </Label>
                         {this.state.text}

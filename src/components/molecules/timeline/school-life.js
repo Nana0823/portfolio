@@ -16,7 +16,7 @@ export default class SchoolLife extends Component {
         return (
             <VerticalTimelineElement
                 date={this.state.date}
-                iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+                iconStyle={{ background: 'gray' }}
             >
                 <h3>{this.state.name}</h3>
                 {this.state.text}
