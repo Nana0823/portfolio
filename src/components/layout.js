@@ -12,7 +12,7 @@ import Footer from './molecules/footer/footer'
 import HeaderMenu from './molecules/header/header-menu'
 import "./layout.css"
 import { Responsive } from 'semantic-ui-react'
-
+const activeItem = ['HOME', 'BLOG', 'PROFILE']
 const Layout = ({ children }) => {
   return (
     <div style={{ backgroundColor: '#99CCCC' }}>

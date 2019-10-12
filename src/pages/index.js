@@ -13,7 +13,7 @@ export default class BlogPage extends Component {
           <MainEyecatch />
           <RecommendBlog />
         </Layout>
-      </div>
+      </div >
     )
   }
 }

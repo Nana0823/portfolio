@@ -1,0 +1,10 @@
+.photo {
+  position: relative;
+  }
+
+.photo div {
+  position: absolute;
+  top: 50%;
+  right: 20%;
+  /*文字の装飾は省略*/
+  }
