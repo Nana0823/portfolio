@@ -24,13 +24,13 @@ export default class BlogProfile extends Component {
                                 <p>
                                     <Icon name='instagram' />
                                     Nanako0823
-                            </p>
+                                </p>
                             </a>
                             <a href='https://github.com/Nana0823'>
                                 <p>
                                     <Icon name='github' />
                                     Nana0823
-                            </p>
+                                </p>
                             </a>
                         </Card.Content>
                     </Card>
@@ -50,11 +50,11 @@ export default class BlogProfile extends Component {
                                     <span>
                                         <Icon name='instagram' />
                                         Nanako0823
-                                </span>
+                                    </span>
                                     <span style={{ marginLeft: '5px' }}>
                                         <Icon name='github' />
                                         Nana0823
-                                </span>
+                                    </span>
                                 </p>
                             </GridColumn>
                         </Grid>
