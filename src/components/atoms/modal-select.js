@@ -12,7 +12,7 @@ const categories = [
 export default class ModalSelect extends Component {
     render() {
         return (
-            <Modal trigger={<Button size='small' color='purple'>絞り込み</Button>} size='mini'>
+            <Modal trigger={<Button size='small' color='yellow'>絞り込み</Button>} size='mini'>
                 <Modal.Header>カテゴリー</Modal.Header>
                 <Modal.Content>
                     <Modal.Description>
@@ -25,7 +25,7 @@ export default class ModalSelect extends Component {
                                 )
                             })}
                             <div style={{ textAlign: 'center', marginTop: '5px' }}>
-                                <Button size='mini' color='purple' style={{ width: '150px' }}>絞り込み</Button>
+                                <Button size='mini' color='yellow' style={{ width: '150px' }}>絞り込み</Button>
                             </div>
                         </p>
                     </Modal.Description>

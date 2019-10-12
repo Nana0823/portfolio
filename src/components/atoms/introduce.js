@@ -10,9 +10,9 @@ export default class Introduce extends Component {
     }
     render() {
         return (
-            <div>
+            <div style={{ fontFamily: 'Century Gothic' }}>
                 <Responsive minWidth={860}>
-                    <Grid style={{ fontFamily: 'Century Gothic' }}>
+                    <Grid>
                         <GridColumn width={5}>
                             <Label as='a' color='teal' tag >
                                 {this.state.title}
