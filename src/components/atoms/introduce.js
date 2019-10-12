@@ -25,7 +25,7 @@ export default class Introduce extends Component {
                 </Responsive>
                 <Responsive maxWidth={860}>
                     <p style={{ marginBottom: '10px' }}>
-                        <Label as='a' size='small' style={{ padding: '5px', marginRight: '10px', color: '#663333' }}>
+                        <Label as='a' size='small' style={{ padding: '5px', marginRight: '10px', backgroundColor: '#CC6666', color: 'white' }}>
                             {this.state.title}
                         </Label>
                         {this.state.text}
