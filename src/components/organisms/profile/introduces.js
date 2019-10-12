@@ -10,7 +10,7 @@ export default class Introduces extends Component {
                     <h3>紹介文</h3>
                     <Segment>
                         < Grid >
-                            <GridColumn width={11}>
+                            <GridColumn width={11} style={{ paddingTop: '5%' }}>
                                 <IntroduceList />
                             </GridColumn>
                             <GridColumn width={5}>

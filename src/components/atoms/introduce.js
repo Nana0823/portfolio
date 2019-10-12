@@ -18,7 +18,7 @@ export default class Introduce extends Component {
                                 {this.state.title}
                             </Label>
                         </GridColumn>
-                        <GridColumn width={11}>
+                        <GridColumn width={11} style={{ paddingTop: '4%' }}>
                             {this.state.text}
                         </GridColumn>
                     </Grid>

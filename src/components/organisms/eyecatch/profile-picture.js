@@ -9,8 +9,8 @@ export default class ProfilePicture extends Component {
             <div class='picture'>
                 <img class='sky' src={YokosukaImage} style={{ borderRadius: '5px', borderCollapse: 'separate' }} />
                 <div>
-                    <Image src={Himawari} size='small' circular style={{ margin: '0 auto' }} />
-                    <h2 style={{ textAlign: 'center', color: 'white', fontFamily: 'Courier', marginTop: '15px' }}>Nanako Ohno</h2>
+                    <Image src={Himawari} size='small' circular style={{ margin: '0 auto', width: '40%', maxWidth: '40%', height: 'auto' }} />
+                    <p style={{ textAlign: 'center', color: 'white', fontFamily: 'Courier', padding: '2%', fontSize: '3vw' }}>Nanako Ohno</p>
                 </div>
             </div>
         )
