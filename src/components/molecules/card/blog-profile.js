@@ -20,14 +20,18 @@ export default class BlogProfile extends Component {
                             </Card.Description>
                         </Card.Content>
                         <Card.Content>
-                            <p>
-                                <Icon name='instagram' />
-                                Nanako0823
+                            <a href='https://www.instagram.com/nanako_0823/?hl=ja'>
+                                <p>
+                                    <Icon name='instagram' />
+                                    Nanako0823
                             </p>
-                            <p>
-                                <Icon name='github' />
-                                Nana0823
+                            </a>
+                            <a href='https://github.com/Nana0823'>
+                                <p>
+                                    <Icon name='github' />
+                                    Nana0823
                             </p>
+                            </a>
                         </Card.Content>
                     </Card>
                 </Responsive>

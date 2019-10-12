@@ -9,8 +9,8 @@ import College from '../../atoms/images/college.png'
 
 const schools = [
     { date: '2011 - 2014', name: '大楠中学校入学', text: '海が見える校舎で青春を謳歌', picture: Ohgusu },
-    { date: '2014 - 2017', name: '大楠中学校入学', text: '海が見える校舎で青春を謳歌', picture: Australia },
-    { date: '2017 - present', name: '大楠中学校入学', text: '海が見える校舎で青春を謳歌', picture: College },
+    { date: '2014 - 2017', name: '横須賀総合高校入学', text: 'オーストラリアに短期留学', picture: Australia },
+    { date: '2017 - present', name: '法政大学入学', text: 'データ工学専攻', picture: College },
 ]
 export default class Timeline extends Component {
     render() {
