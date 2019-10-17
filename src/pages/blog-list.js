@@ -9,7 +9,7 @@ const activeItem = 'BLOG'
 export default class Blogs extends Component {
     render() {
         return (
-            <Layout>
+            <Layout activeItem='BLOG'>
                 <Responsive minWidth={860}>
                     <Grid style={{ margin: '0 auto', maxWidth: '1000px' }}>
                         <GridColumn width={12}>

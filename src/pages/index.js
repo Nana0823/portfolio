@@ -9,7 +9,7 @@ export default class BlogPage extends Component {
   render() {
     return (
       <div>
-        <Layout>
+        <Layout activeItem='HOME'>
           <MainEyecatch />
           <RecommendBlog />
         </Layout>

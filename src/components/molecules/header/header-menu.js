@@ -69,7 +69,7 @@ export default class HeaderMenu extends Component {
                                 <Menu.Menu>
                                     {headerMenuItem.map((header) => {
                                         return (
-                                            <MenuItem key={header.idx} title={header.title} page={header.page} />
+                                            <MenuItem key={header.idx} title={header.title} page={header.page} activeItem={this.state.activeItem} />
                                         )
                                     })}
                                 </Menu.Menu>

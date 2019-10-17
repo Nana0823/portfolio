@@ -7,7 +7,7 @@ export default class BlogPage extends Component {
     render() {
         return (
             <div>
-                <Layout>
+                <Layout activeItem='BLOG'>
                     <Blog />
                 </Layout>
             </div>

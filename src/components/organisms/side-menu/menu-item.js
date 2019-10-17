@@ -9,7 +9,8 @@ export default class MenuItem extends Component {
         super(props);
         this.state = {
             title: props.title,
-            page: props.page
+            page: props.page,
+            activeItem: props.activeItem
         };
     }
     render() {
@@ -18,7 +19,7 @@ export default class MenuItem extends Component {
             <Link to={this.state.page}>
                 <Menu.Item
                     name={this.state.title}
-                    active={activeItem === (this.state.title)}
+                    active={this.state.activeItem === (this.state.title)}
                     onClick={this.handleItemClick}
                     style={{ marginTop: '10px', textAlign: 'left' }}
                 />

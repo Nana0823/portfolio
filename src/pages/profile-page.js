@@ -8,7 +8,7 @@ const activeItem = 'PROFILE'
 export default class Profile extends Component {
     render() {
         return (
-            <Layout>
+            <Layout activeItem='PROFILE'>
                 <ProfilePicture />
                 <Introduces />
                 <Timeline />
