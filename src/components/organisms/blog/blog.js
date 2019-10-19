@@ -48,7 +48,3 @@ export default class BlogItem extends Component {
         )
     }
 }
-
-
-
-

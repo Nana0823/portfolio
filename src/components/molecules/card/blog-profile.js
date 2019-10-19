@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Image, Card, Icon, Responsive, Grid, Segment, GridColumn } from 'semantic-ui-react';
 import { Link } from 'gatsby'
-
+import Profile from '../../atoms/images/profile2.png'
 export default class BlogProfile extends Component {
     render() {
         return (
@@ -10,7 +10,7 @@ export default class BlogProfile extends Component {
                     <Card>
                         <Card.Content textAlign='center'>
                             <Image
-                                src='https://react.semantic-ui.com/images/wireframe/image.png'
+                                src={Profile}
                             />
                             <Link to='profile-page'>
                                 <Card.Header>大野奈那子　</Card.Header>
@@ -39,7 +39,7 @@ export default class BlogProfile extends Component {
                     <Segment>
                         <Grid>
                             <GridColumn width={4}>
-                                <Image src='https://react.semantic-ui.com/images/wireframe/square-image.png' circular />
+                                <Image src={Profile} />
                             </GridColumn>
                             <GridColumn width={12}>
                                 <Link to='profile-page'>
