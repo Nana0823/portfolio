@@ -66,7 +66,7 @@ export default class BlogCard extends Component {
                                                             <Card>
                                                                 <Image src='https://react.semantic-ui.com/images/wireframe/image.png' wrapped ui={false} />
                                                                 <Card.Content>
-                                                                    <Link to='blog-list'>
+                                                                    <Link to='blog-page'>
                                                                         <Card.Header>{blog.node.title}</Card.Header>
                                                                     </Link>
                                                                     <Card.Meta>
