@@ -47,14 +47,18 @@ export default class BlogProfile extends Component {
                                 </Link>
                                 エンジニア志望の大学３年生。
                                 <p>
-                                    <span>
-                                        <Icon name='instagram' />
-                                        Nanako0823
+                                    <a href='https://www.instagram.com/nanako_0823/?hl=ja'>
+                                        <span>
+                                            <Icon name='instagram' />
+                                            Nanako0823
                                     </span>
-                                    <span style={{ marginLeft: '5px' }}>
-                                        <Icon name='github' />
-                                        Nana0823
+                                    </a>
+                                    <a href='https://github.com/Nana0823'>
+                                        <span style={{ marginLeft: '5px' }}>
+                                            <Icon name='github' />
+                                            Nana0823
                                     </span>
+                                    </a>
                                 </p>
                             </GridColumn>
                         </Grid>
