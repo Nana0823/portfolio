@@ -14,7 +14,6 @@ export default class MenuItem extends Component {
         };
     }
     render() {
-        const { activeItem } = this.state
         return (
             <Link to={this.state.page}>
                 <Menu.Item

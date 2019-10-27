@@ -21,7 +21,7 @@ export default class SchoolLife extends Component {
                 <h3>{this.state.name}</h3>
                 {this.state.text}
                 <p>
-                    <img src={(this.state.picture)} />
+                    <img alt='school' src={(this.state.picture)} />
                 </p>
             </VerticalTimelineElement>
         )

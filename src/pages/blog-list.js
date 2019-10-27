@@ -5,7 +5,6 @@ import BlogHeader from '../components/molecules/header/blog-header'
 import Layout from '../components/layout'
 import { Grid, GridColumn, Responsive, Pagination } from 'semantic-ui-react';
 
-const activeItem = 'BLOG'
 export default class Blogs extends Component {
     render() {
         return (
