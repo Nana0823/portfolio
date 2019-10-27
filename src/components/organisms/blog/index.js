@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import RecentPosts from './recent-posts'
-import BlogItem from './blog'
+import BlogItem from './blog-item'
 import RecommendBlog from './recommend-blog'
 import BlogProfile from '../../molecules/card/blog-profile'
 import BlogPicture from '../../atoms/blog-picture'

@@ -6,6 +6,7 @@ export default class RecentPosts extends Component {
     render() {
         return (
             <Segment>
+                <h3 style={{ textAlign: 'center' }}>最新の記事</h3>
                 <Responsive minWidth={780}>
                     <Item.Group>
                         <RecentBlogCard />
