@@ -57,7 +57,7 @@ export default class BlogCard extends Component {
                                                     <Grid.Column style={{
                                                         border: 'solid', borderWidth: '1px', padding: '0px', backgroundColor: 'white', margin: '0px 10px'
                                                     }}>
-                                                        <Link to='blog-page'>
+                                                        <Link to={blog.node.title}>
                                                             <Image src='https://react.semantic-ui.com/images/wireframe/image.png' />
                                                             <h4>{blog.node.title}</h4>
                                                         </Link>
@@ -78,7 +78,7 @@ export default class BlogCard extends Component {
                                                     <Grid.Column style={{
                                                         border: 'solid', borderWidth: '1px', padding: '0px', backgroundColor: 'white', margin: '0px 10px'
                                                     }}>
-                                                        <Link to='blog-page'>
+                                                        <Link to={blog.node.title}>
                                                             <Image src='https://react.semantic-ui.com/images/wireframe/image.png' style={{ marginBottom: '5px' }} />
                                                             <h4>{blog.node.title}</h4>
                                                         </Link>

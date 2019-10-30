@@ -36,12 +36,12 @@ export default class BlogCard extends Component {
                                             return (
                                                 <>
                                                     <GridColumn width={5}>
-                                                        <Link to='blog-page'>
+                                                        <Link to={blog.node.title}>
                                                             <Image src='https://react.semantic-ui.com/images/wireframe/image.png' size='small' />
                                                         </Link>
                                                     </GridColumn>
                                                     <GridColumn width={11}>
-                                                        <Link to='blog-page'>
+                                                        <Link to={blog.node.title}>
                                                             <h3 style={{ marginBottom: '26px' }}>{blog.node.title}</h3>
                                                         </Link>
                                                         <p>
@@ -66,7 +66,7 @@ export default class BlogCard extends Component {
                                                             <Card>
                                                                 <Image src='https://react.semantic-ui.com/images/wireframe/image.png' wrapped ui={false} />
                                                                 <Card.Content>
-                                                                    <Link to='blog-page'>
+                                                                    <Link to={blog.node.title}>
                                                                         <Card.Header>{blog.node.title}</Card.Header>
                                                                     </Link>
                                                                     <Card.Meta>

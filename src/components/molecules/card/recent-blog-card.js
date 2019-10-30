@@ -37,7 +37,7 @@ export default class RecentBlogCard extends Component {
                                                 <>
                                                     <Item>
                                                         <Item.Image size='tiny' src='https://react.semantic-ui.com/images/wireframe/image.png' />
-                                                        <Link to='blog-page'>
+                                                        <Link to={blog.node.title}>
                                                             <Item.Content verticalAlign='middle' header={blog.node.title} meta={blog.node.updatedAt} />
                                                         </Link>
                                                     </Item>
@@ -53,7 +53,7 @@ export default class RecentBlogCard extends Component {
                                                 <Card>
                                                     <Image src='https://react.semantic-ui.com/images/wireframe/image.png' wrapped ui={false} />
                                                     <Card.Content>
-                                                        <Link to='blog-list'>
+                                                        <Link to={blog.node.title}>
                                                             <Card.Header>{blog.node.title}</Card.Header>
                                                         </Link>
                                                         <Card.Meta>
