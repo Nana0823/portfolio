@@ -11,12 +11,22 @@
     "gatsby-plugin-offline": "^3.0.7",
     "gatsby-plugin-react-helmet": "^3.1.7",
     "gatsby-plugin-sharp": "^2.2.24",
+    "gatsby-source-contentful": "^2.1.45",
     "gatsby-source-filesystem": "^2.1.24",
+    "gatsby-transformer-remark": "^2.6.27",
     "gatsby-transformer-sharp": "^2.2.15",
     "prop-types": "^15.7.2",
+    "rc-texty": "^0.2.0",
+    "rc-tween-one": "^2.6.5",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "react-particles-js": "^2.7.0",
+    "react-slick": "^0.25.2",
+    "react-vertical-timeline-component": "^2.5.0",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^0.88.1",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "prettier": "^1.18.2"
